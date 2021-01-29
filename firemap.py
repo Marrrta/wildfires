@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,16 +11,9 @@ import json
 import plotly.express as px
 import plotly.graph_objects as go
 from mpl_toolkits.basemap import Basemap
-
 with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
-
-%config InlineBackend.figure_format = 'retina'
-
-import streamlit as st
-from __future__ import print_function
-from ipywidgets import interact, interactive, fixed, interact_manual
-import ipywidgets as widgets
+# %config InlineBackend.figure_format = 'retina'
 
 # Imports
 #------------------------------------------------
@@ -117,12 +111,12 @@ def fires_month_year(month, year):
     # save the figure and show it
     plt.title("Fires in Western US states")
 
-    print(f'Number of fires started during {month}/{year} : {len(fire_position)}.')
-    print(f'large fires : {len(fire_position[fire_position["fire_size_class"] >4])} ')
-    print(f'medium fire : {len(fire_position[(fire_position["fire_size_class"] > 2) & (fire_position["fire_size_class"]< 5)])}')
-    print(f'small fires : {len(fire_position[fire_position["fire_size_class"] < 3])}')
+    st.write(f'Number of fires started during {month}/{year} : {len(fire_position)}.')
+    st.write(f'large fires : {len(fire_position[fire_position["fire_size_class"] >4])} ')
+    st.write(f'medium fire : {len(fire_position[(fire_position["fire_size_class"] > 2) & (fire_position["fire_size_class"]< 5)])}')
+    st.write(f'small fires : {len(fire_position[fire_position["fire_size_class"] < 3])}')
+    return fig
 
-    return (month, year)
 
 #-------------------------------------------------------
 # More Page configuration
@@ -139,11 +133,10 @@ if page == 'Map':
 
     # get user input
     month = st.slider("Select the Month", 1, 12)
-    st.test('Selected: {}'.format(month))
+    st.text('Selected: {}'.format(month))
     year = st.slider("Select the Year", 1992, 2015)
-    st.test('Selected: {}'.format(year))
+    st.text('Selected: {}'.format(year))
 
-
-#----------------------------------------------
-   # run the plotting function.
-   fires_month_year(month, year)
+    # run the plotting function.
+    fire_position_input = load_data()
+    st.pyplot(fires_month_year(month, year))
