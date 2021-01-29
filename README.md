@@ -18,6 +18,10 @@ We used two sources of data which were studied through EDA and then combined int
 The two datasets were combined by matching weather information and fire data on the combination of month-year-state for each of the fires that burned from 1992 to 2015 in the eleven states of interest.
 Because the effects of weather on fire can be delayed, we additionally included in our modeling data trailing 12-, 9-, 6-, and 3-month averages for precipitation, temperature, and two drought indexes.
 
+We also took a deep dive into NOAA wind data but discovered that the combined datasets were far too large to add to our existing dataframe. Because wind direction is a great weather prediction, and because wind speed can cause file We believe that adding wind data, such as wind speed, gusts and potentially wind direction would have added significant value to our models.
+
+Another interesting data set we encountered was foliage data from Google Earth Engine. This required setting up an account with Google and being accepted to use their engine, and then exploring data using Javascript. It became too cumbersome for our efforts.
+
 **GoogleMaps data? Additional NOAA data?
 
 ### Key Observations
