@@ -4,12 +4,12 @@
 
 ## Table of contents
 * [Tech Stack](###Tech-Stack)
-* [Problem Statement](###problem-statment)
+* [Problem Statement](###Problem-Statment)
 * [Summary](###Summary)
 * [Data](###Data)
 * [Modeling](###Modeling)
-* [Key Observations](###Key-Observations)
-* [Conclusion and Recommendations](###Conclusion-and-Recommendations)
+* [Conclusions](###Conclusions)
+* [Recommendations](###Recommendations)
 * [Next Steps](###Next-Steps)
 
 ----------
@@ -91,7 +91,7 @@ The third major breakthrough was the trailing averages as noted in the summary a
 ![](/visuals/confusion_matrix_fire.png)
 
 ---------------------------
-### Key Observations
+### Conclusions
 
 1. Wildfires are extremely complex phenomena. While the NOAA data offered a set of independent variables which fairly comprehensively described weather history, we were not able to include in our model other important factors which also affect final fire size, such as wind or terrain features (e.g. land cover or incline).
 
@@ -116,7 +116,7 @@ The third major breakthrough was the trailing averages as noted in the summary a
 |G|5000+|0.07%|86%|
 
 -----------------------
-### Conclusions and Recommendations
+### Recommendations
 
 For further research we recommend extracting NOAA wind data such as wind speed, gusts and potentially wind directionality. Furthermore, vegetation data and environmental composition data which is available on Google’s Earth Engine’s LANDFIRE databases potentially play a significant part in telling a deeper story on a wildfire destructive ability. Merging those features into our datasets was unfortunately out of reach due to the time restraints thus we did not include them. However we believe these features merged into our current dataset could expand in a worthwhile manner.
 
