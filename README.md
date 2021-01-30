@@ -3,14 +3,14 @@
 ### Project 5: A group project focused on prediction of fire risk based on meteorological data.
 
 ## Table of contents
-* [Tech Stack](### Tech-Stack)
-* [Problem Statement](### Problem Statment)
-* [Summary](### Summary)
-* [Data](### Data)
-* [Modeling](### Modeling)
-* [Conclusions](### Conclusions)
-* [Recommendations](### Recommendations)
-* [Next Steps](### Next-Steps)
+* [Tech Stack](###Tech-Stack)
+* [Problem Statement](###Problem-Statment)
+* [Summary](###Summary)
+* [Data](###Data)
+* [Modeling](###Modeling)
+* [Conclusions](###Conclusions)
+* [Recommendations](###Recommendations)
+* [Next Steps](###Next-Steps)
 
 ----------
 ### Tech Stack
