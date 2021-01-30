@@ -162,3 +162,4 @@ For further research we recommend extracting NOAA wind data such as wind speed, 
 |tmin|Minimum Temperature|
 |tmax|Maximum Temperature|
 |month_2 - month_12|Dummy Month Variables|
+
